@@ -3,17 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Add user</title>
+    <title>Document</title>
 </head>
 <body>
-    <h1>Add user</h1>
-    <form action="/add" method="post">
+    <% if (errors) { %>
+        <div style="color: red;"><%= error %></div>
+    <%} %>
+    <h1>Create Account</h1>
+    <form action="/register" method="post">
         <label for="">Name</label>
         <input type="text" name="name" placeholder="Enter name"><br>
         <label for="">Place</label>
-        <input type="text" name="place" placeholder="enter place"><br>
+        <input type="text" name="place" placeholder="Enter Palce"><br>
 
-        <button type="submit">Save user</button>
+        <button type="submit">Register</button>
     </form>
 </body>
 </html>
