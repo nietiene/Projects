@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update</title>
+</head>
+<body>
+    <form action="/user/update/<%= user.id %>" method="post">
+        <label for="">Id</label>
+        <input type="text" name="id" placeholder="Enter Id" value="<%= user.id %>" readonlyx    ><br>
+        <label for="">name</label>
+        <input type="text" name="name" placeholder="Enter name" value="<%= user.name %>"><br>
+        <label for="">place</label>
+        <input type="text" name="place" placeholder="Enter place" value="<%= user.place %>"><br>
+
+        <button type="submit">Save User</button>
+ 
+    </form>
+</body>
+</html>

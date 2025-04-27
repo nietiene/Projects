@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <table border="2">
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Place</th>
+            <th  colspan="2">Operation</th>
+        </tr>
+        <% user.forEach((user) => { %>
+            <tr>
+                <td><%= user.id %></td>
+                <td><%= user.name %></td>
+                <td><%= user.place %></td>
+
+                <td>
+                    <form action="/user/delete/<%=user.id %>"" method="post">
+                          <button onclick="return confirm('Are you sure you want to delete <%= user.name %>')">Delete</button>
+                    </form>
+                </td>
+                <td><a href="/user/update/<%= user.id %>">Update</a></td>
+            </tr>
+      <%  }); %>
+        
+    </table>
+
+</body>
+</html>
