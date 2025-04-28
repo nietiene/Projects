@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+<body>
+    <% if (successMsg) { %>
+        <div style="color: green;"><%= successMsg %></div>
+    <% } %>
+
+    <% if (errorMsg) { %>
+         <div style="color: red;"><%= errorMsg %></div>
+    <% } %>
+    <form action="/user/login" method="post">
+        <label for="">Id</label>
+        <input type="text" name="id" placeholder="Enter id"><br>
+        <label for="">Name</label>
+        <input type="text" name="name" placeholder="enter name"><br>
+        <label for="">place</label>
+        <input type="text" name="place" placeholder="Enter place"><br>
+
+        <button>Login</button>
+    </form>
+</body>
+</html>
